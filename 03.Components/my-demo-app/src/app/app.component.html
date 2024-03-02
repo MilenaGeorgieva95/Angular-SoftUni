@@ -1,0 +1,15 @@
+<h3>Hello, my first app</h3>
+
+<app-nav></app-nav>
+<app-navigation></app-navigation>
+<app-navigation></app-navigation>
+<app-navigation></app-navigation>
+<hr style="padding-bottom: 3em" />
+
+<app-user-list></app-user-list>
+<hr style="padding-bottom: 3em" />
+
+<app-playground color="{{ colorValueForPlayground }}"></app-playground>
+<hr style="padding-bottom: 3em" />
+
+<app-playground (childFnEmitsValue)="parentFnOnEmit($event)"></app-playground>

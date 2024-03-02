@@ -1,0 +1,27 @@
+<p>playground works!</p>
+
+<div *ngIf="isToggle">
+  <img [attr.src]="imgUrl" />
+</div>
+
+<button (click)="handleClick($event)">Click me!</button>
+<div [class]="bkgColor">Toggled chicken!</div>
+
+<p [class.shiny]="isToggle">This text will be shiny on click!</p>
+
+<div [style.background-color]="isToggle ? 'orange' : 'green'">
+  Dynamic color changer 1
+</div>
+<div [style.color]="isToggle ? 'orange' : 'green'">Dynamic color changer 2</div>
+<div [style.font-size.em]="isToggle ? 3 : 0.5">Dynamic color changer 3</div>
+<div [style.font-size.%]="isToggle ? 150 : 70">Dynamic color changer 4</div>
+
+<hr />
+
+<input type="text" #username />
+<button (click)="handleInput(username.value)">Handle input</button>
+<p *ngIf="usernameV">Hello {{ this.usernameV }}</p>
+
+<div [attr.data-test123]="'test123'">Custom data attribute</div>
+
+<div [style.background-color]="colorValue">Input color value test</div>

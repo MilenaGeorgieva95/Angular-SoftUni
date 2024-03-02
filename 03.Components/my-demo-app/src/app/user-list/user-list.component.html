@@ -1,0 +1,14 @@
+<div class="toggle-wrapper" *ngIf="isToggle">
+  <ul>
+    <li *ngFor="let user of users; index as i">
+      {{ i }} - {{ user.name }} : {{ user.age }}
+      <span *ngIf="user.age % 2 === 0"> ==> even age : {{ user.age }} </span>
+      <div [class]="user?.status">User Status</div>
+    </li>
+  </ul>
+</div>
+
+<button (click)="handleClick($event)">
+  Click me!
+  <span *ngIf="this.isToggle == true"> Hide list</span>
+</button>
