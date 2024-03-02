@@ -1,0 +1,6 @@
+<ul *ngFor="let article of articlesArr">
+  <app-article
+    [article]="article"
+    [articleDesc]="article.description"
+  ></app-article>
+</ul>
