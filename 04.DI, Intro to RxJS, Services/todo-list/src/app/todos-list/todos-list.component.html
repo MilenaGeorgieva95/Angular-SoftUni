@@ -1,1 +1,7 @@
-<p>todos-list works!</p>
+<p>Todos List: </p>
+
+<ul>
+  <li *ngFor="let todo of todosData">
+    <app-todo-item [todoTask]=todo.task/>
+  </li>
+</ul>
