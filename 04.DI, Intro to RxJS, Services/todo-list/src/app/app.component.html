@@ -1,4 +1,10 @@
 <p>{{title}}</p>
 <app-todos-list [todos]="todos"/>
 
+<div>
+    <label for="todo">Create New Todo: </label>
+    <input type="text" placeholder="New Task" id="todo" #inputTask>
+    <button (click)="addTodo(inputTask)">Create</button>
+</div>
+
 

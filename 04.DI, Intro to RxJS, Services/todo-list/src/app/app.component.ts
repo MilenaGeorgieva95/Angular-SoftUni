@@ -13,4 +13,7 @@ export class AppComponent {
     { task: 'Feed the cat.', completed: true },
     { task: 'Wash the dishes.', completed: false },
   ];
+  addTodo(inputTask: HTMLInputElement) {
+    this.todos.push({ task: inputTask.value, completed: false });
+  }
 }
