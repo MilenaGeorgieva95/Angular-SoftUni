@@ -11,12 +11,16 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getThemes() {
-    const {apiUrl} = environment;
-    return this.http.get<Theme[]>(`${apiUrl}/themes`)
+    const { apiUrl } = environment;
+    return this.http.get<Theme[]>(`${apiUrl}/themes`);
   }
 
-  getPosts() {
-    const {apiUrl} =environment;
-    return this.http.get<Post[]>(`${apiUrl}/posts`)
+  getPosts(limit?: number) {
+    const { apiUrl } = environment;
+    let url = `${apiUrl}/posts`;
+    if (limit) {
+      url += `?limit=${limit}`;
+    }
+    return this.http.get<Post[]>(url);
   }
 }
