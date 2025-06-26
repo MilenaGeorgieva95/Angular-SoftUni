@@ -5,7 +5,11 @@
   "projects": {
     "forum-app-workshop": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component":{
+          "skipTests":true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",

@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import {HttpClientModule} from '@angular/common/http';
+import { PostItemComponent } from './posts-list/post-item/post-item.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {HttpClientModule} from '@angular/common/http';
     PostsListComponent,
     HomeComponent,
     AboutComponent,
+    PostItemComponent,
   ],
   imports: [
     BrowserModule,
