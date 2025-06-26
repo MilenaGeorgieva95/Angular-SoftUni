@@ -1,0 +1,17 @@
+p {
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ h3 {
+  border-bottom: none;
+  border-radius: 0.3rem;
+  font-size: 1.2rem;
+  background-color: #4ebced;
+  padding-left: 0.5rem;
+}
+
