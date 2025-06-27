@@ -12,9 +12,15 @@ export class ThemesListComponent implements OnInit {
   isLoading: boolean = true;
   constructor(private api: ApiService) {}
   ngOnInit(): void {
-    this.api.getThemes().subscribe((themes) => {
-      this.themes = themes;
-      this.isLoading = false;
+    this.api.getThemes().subscribe({
+      next: (themes) => {
+        this.themes = themes;
+        this.isLoading = false;
+      },
+      error: (err) => {
+        this.isLoading = false;
+        console.log('Error: ' + err);
+      },
     });
   }
 }
