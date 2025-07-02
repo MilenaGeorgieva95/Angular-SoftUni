@@ -1,0 +1,21 @@
+.btn{
+max-width: 20%;
+    color: white;
+    background-color: lightgreen;
+    text-align: center;
+    padding: 10px 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.btn:hover, .btn:focus{
+    color: green;
+    background-color: aliceblue;
+    border: 2px solid green;
+}
+
+.disabled{
+    background-color: grey;
+    pointer-events: none;
+}
