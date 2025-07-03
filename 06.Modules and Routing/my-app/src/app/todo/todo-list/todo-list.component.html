@@ -1,1 +1,8 @@
-<p>todo-list works!</p>
+<div>
+    <ul>
+        <li *ngFor="let todo of todos">
+            <button (click)="completeTodo(todo.id)">{{todo.completed?'Completed':'Pending'}}</button> - <span>{{todo.title}}</span>
+            
+        </li>
+    </ul>
+</div>

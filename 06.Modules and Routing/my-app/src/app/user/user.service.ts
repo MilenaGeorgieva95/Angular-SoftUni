@@ -7,7 +7,7 @@ import { User } from '../types/user';
   providedIn: 'root',
 })
 export class UserService {
-  API = environment.UserApiUrl;
+  API = environment.JsonPlaceholderEndpoints.users;
 
   constructor(private http: HttpClient) {}
 
