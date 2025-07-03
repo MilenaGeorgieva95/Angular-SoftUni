@@ -1,0 +1,16 @@
+.nav-wrapper{
+    background-color: rgb(121, 132, 132);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    
+}
+.nav-wrapper li{
+padding: 5px;
+cursor: pointer;
+}
+.nav-wrapper li:hover{
+padding: 10px;
+background-color: rgb(248, 255, 240);
+}
