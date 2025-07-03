@@ -1,9 +1,5 @@
-<p>user-list works!</p>
-<div class="btn" (click)="fetchUsers()" [class.disabled]="isLoading">Fetch Users</div>
-<div *ngIf="isLoading">
-<app-spinner />
-</div>
-<ul *ngIf="!isLoading">
+<div class="btn" (click)="fetchUsers()" [class.disabled]="!globalLoaderService.isHidden">Fetch Users</div>
+<ul *ngIf="globalLoaderService.isHidden">
 <li *ngFor="let user of users">
     {{user.name}}
 </li>
