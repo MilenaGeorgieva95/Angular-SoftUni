@@ -1,7 +1,9 @@
 <p>nav works!</p>
 <div>
-    <ul class="nav-wrapper">
-        <li>User List</li>
-        <li>Todo List</li>
-    </ul>
+  <ul class="nav-wrapper">
+    <li (click)="navTo('')">User List</li>
+    <li (click)="navTo('todo')">Todo List</li>
+    <li routerLink="">User List navlink</li>
+    <li routerLink="todo"Link="todo">Todo List navling</li>
+  </ul>
 </div>

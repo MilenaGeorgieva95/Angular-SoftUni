@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
 import { User } from 'src/app/types/user';
 import { GlobalLoaderService } from 'src/app/core/global-loader/global-loader.service';
