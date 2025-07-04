@@ -12,7 +12,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SharedModule,
     RouterModule.forChild([
       { path: 'user/list', component: UserListComponent },
-      { path: 'user/details', component: UserDetailsComponent },
+      { path: 'user/details/:id', component: UserDetailsComponent },
     ]),
   ],
   exports: [UserListComponent],
