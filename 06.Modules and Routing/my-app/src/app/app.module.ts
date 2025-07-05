@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CoreModule } from "./core/core.module";
 import { UserModule } from './user/user.module';
-import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { TodoModule } from './todo/todo.module';
 
 @NgModule({
