@@ -1,7 +1,16 @@
-<div class="btn" (click)="fetchUsers()" [class.disabled]="!globalLoaderService.isHidden">Fetch Users</div>
+<div
+  class="btn"
+  (click)="fetchUsers()"
+  [class.disabled]="!globalLoaderService.isHidden"
+>
+  Fetch Users
+</div>
 <ul *ngIf="globalLoaderService.isHidden">
-<li *ngFor="let user of users">
-    {{user.name}}
-</li>
+  <li
+    *ngFor="let user of users"
+    class="user-item"
+    [routerLink]="['/user', 'details', user.id]"
+  >
+    {{ user.name }}
+  </li>
 </ul>
-

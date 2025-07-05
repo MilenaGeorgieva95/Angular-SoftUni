@@ -1,21 +1,36 @@
-.btn{
-max-width: 20%;
-    color: white;
-    background-color: lightgreen;
-    text-align: center;
-    padding: 10px 8px;
-    border-radius: 20px;
-    cursor: pointer;
-    box-sizing: border-box;
-    font-size: 16px;
+.btn {
+  max-width: 20%;
+  color: white;
+  background-color: lightgreen;
+  text-align: center;
+  padding: 10px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: 16px;
 }
-.btn:hover, .btn:focus{
-    color: green;
-    background-color: aliceblue;
-    border: 2px solid green;
+.btn:hover,
+.btn:focus {
+  color: green;
+  background-color: aliceblue;
+  border: 2px solid green;
 }
 
-.disabled{
-    background-color: grey;
-    pointer-events: none;
+.disabled {
+  background-color: grey;
+  pointer-events: none;
+}
+
+.user-item {
+  padding: 5px 3px;
+  margin: 2px;
+  list-style: none;
+  background-color: lightgrey;
+  max-width: 50%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.user-item:hover, .user-item:focus{
+    background-color: chartreuse;
 }

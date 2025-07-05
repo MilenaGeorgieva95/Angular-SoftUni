@@ -4,6 +4,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserResolve } from './user-details/user-details.resolver';
 
 @NgModule({
   declarations: [UserListComponent],
@@ -12,7 +13,11 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     SharedModule,
     RouterModule.forChild([
       { path: 'user/list', component: UserListComponent },
-      { path: 'user/details/:id', component: UserDetailsComponent },
+      {
+        path: 'user/details/:id',
+        component: UserDetailsComponent,
+        resolve: { user: UserResolve },
+      },
     ]),
   ],
   exports: [UserListComponent],
