@@ -32,14 +32,14 @@ mouseOverHandler(e:MouseEvent){
 
   mouseEnterHandler(e:MouseEvent):void{
         //? this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'pink');
-      this.renderer.addClass(this.elRef.nativeElement, 'highlight-el')
+      this.renderer.addClass(this.elRef.nativeElement, 'highlight-el');
   }
 
   mouseLeaveHandler(e:MouseEvent):void{
-      this.renderer.removeClass(this.elRef.nativeElement, 'highlight-el')
+      this.renderer.removeClass(this.elRef.nativeElement, 'highlight-el');
   }
 
   ngOnDestroy(): void {
-    this.unsubFromEventsArr.forEach(fn=>fn())
+    this.unsubFromEventsArr.forEach(fn=>fn());
   }
 }
