@@ -18,10 +18,11 @@ export class HighlightDirective implements OnInit {
   }
 
   mouseEnterHandler(e:MouseEvent):void{
-        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'pink');
+        //? this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'pink');
+      this.renderer.addClass(this.elRef.nativeElement, 'highlight-el')
   }
 
   mouseLeaveHandler(e:MouseEvent):void{
-        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'initial');
+      this.renderer.removeClass(this.elRef.nativeElement, 'highlight-el')
   }
 }
