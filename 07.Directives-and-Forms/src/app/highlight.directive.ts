@@ -4,9 +4,10 @@ import { Directive, ElementRef, HostListener, OnInit, Renderer2 } from '@angular
   selector: '[appHighlight]',
 })
 export class HighlightDirective implements OnInit {
-@HostListener('mouseover', ['$event']) mouseOverhandler(e:MouseEvent){
+
+@HostListener('mouseover', ['$event']) 
+mouseOverHandler(e:MouseEvent){
   console.log('mouseOver ');
-  
 }
 
   constructor(private elRef: ElementRef, private renderer: Renderer2) {}
