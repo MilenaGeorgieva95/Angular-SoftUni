@@ -10,6 +10,18 @@ export class HighlightDirective implements OnInit {
     //? this.elRef.nativeElement
     //? this.elRef.nativeElement.style.background='orange'
 
-    this.renderer.setStyle(this.elRef.nativeElement, 'background', 'purple');
+    //? this.renderer.setStyle(this.elRef.nativeElement, 'background', 'purple');
+
+    this.renderer.listen(this.elRef.nativeElement, 'mouseenter', this.mouseEnterHandler.bind(this))
+
+    this.renderer.listen(this.elRef.nativeElement,'mouseleave', this.mouseLeaveHandler.bind(this))
+  }
+
+  mouseEnterHandler(e:MouseEvent):void{
+        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'pink');
+  }
+
+  mouseLeaveHandler(e:MouseEvent):void{
+        this.renderer.setStyle(this.elRef.nativeElement, 'background-color', 'initial');
   }
 }
