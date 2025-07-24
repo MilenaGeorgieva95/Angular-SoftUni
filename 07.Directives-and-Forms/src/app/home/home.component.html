@@ -23,8 +23,11 @@
   [appMyStructural]="isShown"
   let-testMe="myCustomValue"
   let-myNum="myCustomNum"
+  #directiveRef="appMyStructural"
 >
   <h3>Structural Dir Usage</h3>
   <div>My Custom Value: {{ testMe }}</div>
   <div>My Custom Num: {{ myNum }}</div>
 </ng-template>
+
+<button (click)="simpleClick(directiveRef)">SimpleClick</button>
