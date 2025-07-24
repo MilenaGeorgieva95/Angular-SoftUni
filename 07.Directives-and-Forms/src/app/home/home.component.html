@@ -7,14 +7,24 @@
 <div appMyRouterLink="/login">Login</div>
 <div appMyRouterLink="/register">Register</div>
 
-<hr>
+<hr />
 
 <div *ngIf="true">Lorem ipsum dolor sit</div>
 
 <ng-template [ngIf]="true">
-    <div>Lorem ipsum dolor sit</div>
+  <div>Lorem ipsum dolor sit</div>
 </ng-template>
 
 <button (click)="toggleMe()">Toggle me</button>
 
 <div *appMyStructural="isShown">Structural Dir Usage</div>
+
+<ng-template
+  [appMyStructural]="isShown"
+  let-testMe="myCustomValue"
+  let-myNum="myCustomNum"
+>
+  <h3>Structural Dir Usage</h3>
+  <div>My Custom Value: {{ testMe }}</div>
+  <div>My Custom Num: {{ myNum }}</div>
+</ng-template>

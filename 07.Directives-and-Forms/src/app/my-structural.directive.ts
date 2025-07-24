@@ -12,7 +12,7 @@ export class MyStructuralDirective implements OnChanges{
     ngOnChanges(): void {
     console.log(this.appMyStructural);
       if(this.appMyStructural){
-        this.viewContainerRef.createEmbeddedView(this.templateRef);
+        this.viewContainerRef.createEmbeddedView(this.templateRef, {myCustomValue:'abc123', myCustomNum: 34});
       }else{
         this.viewContainerRef.clear();
     }
