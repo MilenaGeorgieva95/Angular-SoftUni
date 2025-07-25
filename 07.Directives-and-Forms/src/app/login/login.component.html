@@ -5,22 +5,24 @@
       <input type="text" id="email" name="email" ngModel required email #emailInput="ngModel"/>
     </div>
 
-    <div *ngIf="emailInput.touched">
-    <p class="error-msg" *ngIf="emailInput.errors?.['required']">Error: Email is required!</p>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input type="text" id="password" name="password" ngModel [appMaxCount]="5" #passwordInput="ngModel"/>
+    </div>
+
+
+    <div *ngIf="emailInput.touched"> <!-- changed, valid -->
+        <p class="error-msg" *ngIf="emailInput.errors?.['required']">Error: Email is required!</p>
     </div>
 
     <div>
         <p class="error-msg" *ngIf="emailInput.errors?.['email']">Error: Email is invalid!</p>
     </div>
 
-    <div class="form-group">
-      <label for="password">Password: </label>
-      <input type="text" id="password" name="password" ngModel [appMaxCount]="5" #passwordInput="ngModel"/>
+    <div *ngIf="passwordInput.errors?.['appMaxCount']">
+        <p class="error-msg" >Error: password too long!</p>
     </div>
 
-    <div *ngIf="passwordInput.errors?.['appMaxCount']">
-      <p class="error-msg" >Error: password too long!</p>
-    </div>
     <button>Login</button>
 
   </form>
