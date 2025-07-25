@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,8 +7,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  formSubmithandler(form: NgForm) {
+  @ViewChild('loginForm') loginForm: NgForm | undefined;
+
+  formSubmithandler() {
+    if (!this.loginForm) {
+      return;
+    }
+
+    const form = this.loginForm;
     console.log(form.value);
-    
+
+    const { email, password } = form?.value;
+    //? form.reset();
+    form.setValue({ email: '', password: '' });
   }
 }
