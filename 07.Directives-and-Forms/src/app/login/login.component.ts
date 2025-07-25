@@ -8,6 +8,11 @@ import { NgForm } from '@angular/forms';
 })
 export class LoginComponent {
   formSubmithandler(form: NgForm) {
+    console.log('invalid: ', form.invalid);
+    if(form.invalid){
+      console.log('Invalid form!');
+      return;
+    }
     console.log(form.value);
     
     const { email, password } = form?.value;

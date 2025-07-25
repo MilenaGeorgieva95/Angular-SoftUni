@@ -2,7 +2,7 @@
   <form #loginForm="ngForm" (ngSubmit)="formSubmithandler(loginForm)">
     <div class="form-group">
       <label for="email">Email: </label>
-      <input type="text" id="email" name="email" ngModel />
+      <input type="text" id="email" name="email" ngModel required/>
     </div>
     <div class="form-group">
       <label for="password">Password: </label>
