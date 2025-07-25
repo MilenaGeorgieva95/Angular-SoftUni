@@ -16,4 +16,11 @@ export class RegisterComponent {
   handleSubmit(): void {
     console.log(this.registerForm.value);
   }
+
+  ngAfterViewInit(){
+    if(this.registerForm){
+      this.registerForm.valueChanges.subscribe(x=>console.log(x)
+      )
+    }
+  }
 }
