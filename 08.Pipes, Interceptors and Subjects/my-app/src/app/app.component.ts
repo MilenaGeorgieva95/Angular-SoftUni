@@ -11,4 +11,7 @@ export class AppComponent {
   sum(acc: number, curr: number): number {
     return acc + curr;
   }
+  p = new Promise((resolve) => {
+    setTimeout(() => resolve(111), 2000);
+  });
 }
