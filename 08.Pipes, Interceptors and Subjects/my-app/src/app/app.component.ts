@@ -13,11 +13,11 @@ export class AppComponent implements OnInit {
   sum(acc: number, curr: number): number {
     return acc + curr;
   }
-  p = new Promise((resolve) => {
-    setTimeout(() => resolve(111), 2000);
-  });
+  // p = new Promise((resolve) => {
+  //   setTimeout(() => resolve(111), 2000);
+  // });
 
-  time$ = interval(1000).pipe(map(() => new Date()));
+  // time$ = interval(1000).pipe(map(() => new Date()));
 
   constructor(private userService: UserService) {}
 
