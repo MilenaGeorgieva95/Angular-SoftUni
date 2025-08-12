@@ -2,4 +2,5 @@
 <div>{{ user | json | uppercase }}</div>
 <div>{{ user.list | reducer : sum : 1 }}</div>
 <div>Promise: {{ p | async }}</div>
+<div>Clock: {{ time$ | async | date : "hh:mm:ss" }}</div>
 <router-outlet></router-outlet>
