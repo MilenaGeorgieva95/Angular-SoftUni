@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, Subject } from 'rxjs';
+import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
 @Component({
   selector: 'app-subjects',
@@ -39,5 +39,30 @@ export class SubjectsComponent implements OnInit {
       subject$$.subscribe((data) => console.log('Data from subscribe D', data));
       subject$$.next(4);
     }, 2000);
+
+    //BehavioralSubject latest next value only
+    const bSubject$$ = new BehaviorSubject(1);
+    bSubject$$.subscribe((data) => console.log('bSubscription 1', data));
+
+    setTimeout(() => {
+      bSubject$$.next(2);
+      bSubject$$.subscribe((data) => console.log('bSubscription 2', data));
+    }, 2000);
+    setTimeout(() => {
+      bSubject$$.next(3);
+      bSubject$$.subscribe((data) => console.log('bSubscription 3', data));
+    }, 2000);
+
+    //Replay Subject
+
+    const rSubject$$ = new ReplaySubject(5);
+    rSubject$$.next(1);
+    rSubject$$.subscribe((data) => console.log('RSubscription 1', data));
+
+    for (let i = 2; i < 10; i++) {
+      rSubject$$.next(i);
+    }
+
+    rSubject$$.subscribe((data) => console.log('RSubscription 2', data));
   }
 }
