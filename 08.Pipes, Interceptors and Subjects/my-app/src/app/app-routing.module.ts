@@ -7,13 +7,12 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },
   {
     path: 'lazy',
-    loadChildren: () =>
-      import('./lazy/lazy/lazy.module').then((m) => m.LazyModule),
+    loadChildren: () => import('./lazy/lazy.module').then((m) => m.LazyModule),
   },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { enableTracing: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
