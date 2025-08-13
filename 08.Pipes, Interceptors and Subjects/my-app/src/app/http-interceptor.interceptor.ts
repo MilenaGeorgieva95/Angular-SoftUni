@@ -31,10 +31,10 @@ export class HttpInterceptorInterceptor implements HttpInterceptor {
       }),
       catchError((error) => {
         if (error.status === 0) {
-          console.log(error);
+          console.log('Error from Interceptor: ', error);
           return EMPTY;
         }
-        return error;
+        return [error];
       })
     );
   }
