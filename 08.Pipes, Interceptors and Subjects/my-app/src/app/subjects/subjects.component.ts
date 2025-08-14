@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
+import {
+  AsyncSubject,
+  BehaviorSubject,
+  Observable,
+  ReplaySubject,
+  Subject,
+} from 'rxjs';
 
 @Component({
   selector: 'app-subjects',
@@ -64,5 +70,16 @@ export class SubjectsComponent implements OnInit {
     }
 
     rSubject$$.subscribe((data) => console.log('RSubscription 2', data));
+
+    //Async Subject
+
+    const asyncSubject$$ = new AsyncSubject();
+    asyncSubject$$.next(1);
+    asyncSubject$$.subscribe((data) => console.log('Subscribe 1: ', data));
+    asyncSubject$$.subscribe((data) => console.log('Subscribe 2: ', data));
+    asyncSubject$$.next(2);
+    asyncSubject$$.next(3);
+    asyncSubject$$.next(4);
+    asyncSubject$$.complete();
   }
 }
