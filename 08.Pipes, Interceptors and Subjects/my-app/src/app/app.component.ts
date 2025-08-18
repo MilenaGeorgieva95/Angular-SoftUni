@@ -22,9 +22,12 @@ export class AppComponent implements OnInit {
   constructor(private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.loadUsers().subscribe({
-      next: (data) => console.log(data),
-      error: (err) => console.log('Error from component: ', err),
-    });
+    // this.userService.loadUsers().subscribe({
+    //   next: (data) => console.log(data),
+    //   error: (err) => console.log('Error from component: ', err),
+    // });
+  }
+  reloadUsers() {
+    this.userService.loadUsers();
   }
 }
