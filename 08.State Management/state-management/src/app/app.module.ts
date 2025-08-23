@@ -8,20 +8,26 @@ import { StoreModule } from '@ngrx/store';
 import { TranslateComponent } from './translate/translate.component';
 import { translateReducer } from './translate/translate.reducer';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { PostComponent } from './post/post.component';
+import { postReducer } from './post/post.reducer';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ReduxSyncSimulationComponent,
-    TranslateComponent
+    TranslateComponent,
+    PostComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({
       message: translateReducer,
+      post: postReducer as any,
     }),
-    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() })
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
