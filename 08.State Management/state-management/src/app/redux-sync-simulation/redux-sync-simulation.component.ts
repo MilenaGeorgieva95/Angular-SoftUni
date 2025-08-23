@@ -24,7 +24,7 @@ export class ReduxSyncSimulationComponent implements OnInit {
     // (takenState, newState) => {switch(action) => complete action}, initialState)
 
     const result1 = [10, 20, 30].reduce(reducer1, 0);
-    console.log({ result1 });
+    // console.log({ result1 });
 
     //Complex example:
 
@@ -64,7 +64,11 @@ export class ReduxSyncSimulationComponent implements OnInit {
 
 
     const result = eventCollection.reduce(reducer, initialState);
-    console.log({result});
+    // console.log({result});
+
+    //NgRx is similar to Redux but uses observables
+    //Enforces uni-directional data flow
+    //Simple flat objects
     
   }
 }
