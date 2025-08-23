@@ -1,0 +1,14 @@
+<h1>Pipes, Interceptors and Subjects</h1>
+<div>{{ user | json | uppercase }}</div>
+<div>{{ user.list | reducer : sum : 1 }}</div>
+<!-- <div>Promise: {{ p | async }}</div> -->
+<!-- <div>Clock: {{ time$ | async | date : "hh:mm:ss" }}</div> -->
+
+<div><a routerLink="/home">Home</a></div>
+<div><a routerLink="/lazy">Lazy</a></div>
+
+<router-outlet></router-outlet>
+
+<app-subjects></app-subjects>
+
+<button click="reloadUsers()">Reload Users</button>
